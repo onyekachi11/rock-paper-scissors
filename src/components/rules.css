@@ -1,0 +1,21 @@
+.rules-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rules-container p{
+    color: hsl(229, 25%, 31%);
+    font-size: 25px;
+}
+
+.rules-img img{
+    width: 300px;
+}

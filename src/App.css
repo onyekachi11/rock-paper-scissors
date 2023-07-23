@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background:linear-gradient( hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+  font-family:'Barlow Semi Condensed';
+}
+/* img{
+  width: 100%;
+} */
+.container{
+  position: relative;
+  height: 100vh;
+}
+
+.scoreboard{
+  border: 1px solid white;
+  display: flex;
+  margin:20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.scoreboard-title{
+  line-height: 16px;
+  font-size: 20px;
+}
+
+.scoreboard-number{
+  background:white ;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.score{
+  color: hsl(229, 64%, 46%);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.number{
+  color: hsl(229, 25%, 31%);
+  font-size: 35px;
+}
+.game-img-firstsection{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+.game-img{
+  width: 120px;
+  background: white;
+  padding: 15px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-img-1{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow:inset 0px 3px 0px #c0c0c0;
+}
+
+.game-img-1 img{
+  width: 40px;
+}
+
+.game-img-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: url('./assets/bg-triangle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px;
+}
+
+section{
+  height: calc(100vh - 140px);
+  /* height: 80%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.paper{
+  background: linear-gradient(to bottom,hsl(230, 89%, 62%), hsl(230, 89%, 55%));
+  box-shadow: 0px 4px 2px hsl(230, 89%, 50%);
+}
+.scissors{
+  background: linear-gradient(to bottom,hsl(39, 89%, 49%), hsl(40, 84%, 43%));
+  box-shadow: 0px 4px 2px hsl(40, 84%, 25%);
+}
+.rock{
+  background: linear-gradient(to bottom,hsl(349, 71%, 52%), hsl(349, 70%, 46%));
+  box-shadow: 0px 4px 4px hsl(349, 80%, 29%);
+}
+
+button{
+  margin-top:120px ;
+  padding: 8px 25px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.rules{
+  display: none;
+}
