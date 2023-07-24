@@ -1,14 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Rock from './assets/icon-rock.svg'
-import Paper from './assets/icon-paper.svg'
-import Scissors from './assets/icon-scissors.svg'
 import Rules from './components/rules'
+import Gamechoice from './components/gamechoice/gamechoice'
+import Paper from './components/choosegame/paper.jsx'
+import Rock from './components/choosegame/rock'
+import Scissors from './components/choosegame/scissors'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeComponent, setActiveComponent] = useState(1);
+  const [userChoice, setUserChoice] = useState('')
+  const [score, setScore] = useState(0)
+
+
+  const handleNext = ()=>{
+    setActiveComponent(activeComponent + 1)
+  }
+  const handleBack = ()=>{
+    setActiveComponent(activeComponent - 1)
+  }
+
 
   return (
     <>
@@ -24,35 +34,40 @@ function App() {
             Score
           </p>
           <p className='number'>
-            12
+            {score}
           </p>
         </div>
       </div>
       <section>
-        <div className='game-img-container'>
-          <div className='game-img-firstsection'>
-          <div className='game-img paper'>
-            <div className='game-img-1'>
-            <img src={Paper} alt="Paper" />
-            </div>
+         <div  className={activeComponent === 1 ? 'game-img-container' : 'hide '}>
+         <div className='game-img-firstsection'>
+          <div onClick={()=>{
+            handleNext()
+            setUserChoice('paper')
+          }}>
+          <Paper />
           </div>
-          <div className='game-img scissors'>
-          <div className='game-img-1'>
-            <img src={Scissors} alt="Scissors" />
-            </div>
+          <div onClick={()=>{
+            handleNext()
+            setUserChoice('scissors')
+          }}>
+          <Scissors/>
           </div>
           </div>
-          <div className='game-img rock'>
-          <div className='game-img-1'>
-            <img src={Rock} alt="Rock" />
-            </div>
+          <div onClick={()=>{
+            handleNext()
+            setUserChoice('rock')
+          }}> 
+          <Rock/>
           </div>
         </div>
-        <div>
+        {activeComponent === 2  && <div className='ame-img-container'><Gamechoice  handleBack={handleBack} userChoice={userChoice} setScore={setScore} score={score}/></div> }
+        <div className={activeComponent === 1 ? 'rules-btn' : 'rules-btn2'}>
         <button>
           rules
         </button>
         </div>
+
       </section>
     </main>
       <div className='rules'>
