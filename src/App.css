@@ -71,6 +71,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .game-img-1{
@@ -90,6 +91,7 @@ body{
 
 .game-img-container{
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -97,10 +99,15 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200px;
+  height: 50%;
+  width: 100vw;
+  /* border: 1px solid green; */
+  /* display: none; */
 }
 
 section{
   height: calc(100vh - 140px);
+  border: 1px solid black;
   /* height: 80%; */
   display: flex;
   justify-content: center;
@@ -121,7 +128,7 @@ section{
   box-shadow: 0px 4px 4px hsl(349, 80%, 29%);
 }
 
-button{
+.rules-btn button{
   margin-top:120px ;
   padding: 8px 25px;
   border-radius: 5px;
@@ -131,7 +138,29 @@ button{
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 2px;
+  cursor: pointer;
 }
+.rules-btn2 button{
+  margin-top:40px ;
+  padding: 8px 25px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid white;
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
 .rules{
   display: none;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
 }
