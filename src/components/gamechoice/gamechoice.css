@@ -3,19 +3,24 @@
     gap: 50px;
     text-align: center;
     margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
 }
 
 .gamechoice p{
     margin-top: 20px;
     text-transform: uppercase;
     color: white;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 2px;
 }
 
-/* .gamechoice-container p{
-    margin-top: 20px;
-    text-transform: uppercase;
+/* .gamechoice-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 } */
 
 .result{

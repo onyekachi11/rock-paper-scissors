@@ -107,7 +107,7 @@ body{
 
 section{
   height: calc(100vh - 140px);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* height: 80%; */
   display: flex;
   justify-content: center;
